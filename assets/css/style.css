@@ -1,0 +1,20 @@
+body {
+    background-image: url("../images/swirl_pattern.png")
+}
+
+#gameWord {
+    font-size:30px;
+    letter-spacing: 10px;
+}
+
+.letterList {
+    font-size:30px;
+    margin-right:10px;
+    color:rgb(184, 183, 183);
+}
+
+.letterPicked {
+    color:rgb(7, 199, 7);
+    font-weight:bolder;
+    font-size:30px;
+}

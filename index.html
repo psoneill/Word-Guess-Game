@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</head>
+<body>
+    <div container>
+        <div class="row">
+            <div class="col-12 p-2 text-center border-bottom bg-dark">
+                <h1 class="text-light">Word Guessing Game - IMDB Top-25 TV Shows</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <div class="card mt-4" style="width: 18rem;">
+                    <img id="tvImage" class="card-img-top" src="https://via.placeholder.com/150" alt="Movie image">
+                    <div class="card-body text-center">
+                        <h5 id="tvName" class="card-title">TV Show Title</h5>
+                        <p id="tvDetail" class="card-text">Details about show</p>
+                        <a id="tvLink" href="#" class="btn btn-primary" target="_blank">Link to IMDB Page</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="jumbotron text-center mt-4">
+                    <h3>Wins: <span id="winsTotal">0</span></h3>
+                    <h4>Press any key to get started!</h4>
+                    <hr>
+                    <h4>Current Word:</h4>
+                    <p id="gameWord" class="mb-4">_ _ _ _ _ _ _ _ _</p>
+                    <hr>
+                    <h5 class="mt-4 mb-4">Number of Guesses Remaining: <span id="guessesRemaining">15</span></h5>
+                    <hr>
+                    <h5 class="mt-4 mb-2">Letters Guessed:</h5>
+                    <span id="letterA" class="letterList">A</span>
+                    <span id="letterB" class="letterList">B</span>
+                    <span id="letterC" class="letterList">C</span>
+                    <span id="letterD" class="letterList">D</span>
+                    <span id="letterE" class="letterList">E</span>
+                    <span id="letterF" class="letterList">F</span>
+                    <span id="letterG" class="letterList">G</span>
+                    <span id="letterH" class="letterList">H</span>
+                    <span id="letterI" class="letterList">I</span>
+                    <span id="letterJ" class="letterList">J</span>
+                    <span id="letterK" class="letterList">K</span>
+                    <span id="letterL" class="letterList">L</span>
+                    <span id="letterM" class="letterList">M</span>
+                    <br />
+                    <span id="letterN" class="letterList">N</span>
+                    <span id="letterO" class="letterList">O</span>
+                    <span id="letterP" class="letterList">P</span>
+                    <span id="letterQ" class="letterList">Q</span>
+                    <span id="letterR" class="letterList">R</span>
+                    <span id="letterS" class="letterList">S</span>
+                    <span id="letterT" class="letterList">T</span>
+                    <span id="letterU" class="letterList">U</span>
+                    <span id="letterV" class="letterList">V</span>
+                    <span id="letterW" class="letterList">W</span>
+                    <span id="letterX" class="letterList">X</span>
+                    <span id="letterY" class="letterList">Y</span>
+                    <span id="letterZ" class="letterList">Z</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

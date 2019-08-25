@@ -43,6 +43,7 @@ document.onkeyup = function(e) {
         guessesRemaining.textContent = parseInt(guessesRemaining.textContent) - 1;
 
         if(pickedWord.toLowerCase().indexOf(userGuess) != -1) {
+            document.getElementById("rightSound").play();
             var userGuessIndex = [];
             for(var i=0; i<pickedWord.length;i++) {
                 if (pickedWord[i].toLowerCase() === userGuess) userGuessIndex.push(i);
@@ -53,13 +54,16 @@ document.onkeyup = function(e) {
                 currentGuess = currentGuess.substr(0, element) + pickedWord[element] + currentGuess.substr(element + 1);
                 document.getElementById("gameWord").textContent = currentGuess;
             });
+        } else {
+            document.getElementById("wrongSound").play();
         }
 
         
     }
 
     if(document.getElementById("gameWord").textContent === pickedWord.replace(/ /g,"+")) 
-    {
+    {  
+        document.getElementById("winSound").play();
         alert("You Win!");
         document.getElementById("winsTotal").textContent = parseInt(document.getElementById("winsTotal").textContent) + 1;
         document.getElementById("tvImage").src = topTVObject.imgSource[randomIndex];
@@ -71,6 +75,7 @@ document.onkeyup = function(e) {
 
     if(guessesRemaining.textContent === "0")
     {
+        document.getElementById("loseSound").play();
         alert("You Lose!");
         gameReset();
     }

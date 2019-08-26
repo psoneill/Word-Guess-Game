@@ -23,11 +23,17 @@ var topTVObject = {
     ,"https://www.imdb.com/title/tt2861424/", "https://www.imdb.com/title/tt0141842/", "https://www.imdb.com/title/tt0417299/", "https://www.imdb.com/title/tt0071075/"
     ,"https://www.imdb.com/title/tt5442430/", "https://www.imdb.com/title/tt1475582/","https://www.imdb.com/title/tt1877514/", "https://www.imdb.com/title/tt0111893/"
     ,"https://www.imdb.com/title/tt1355642/","https://www.imdb.com/title/tt9566030/", "https://www.imdb.com/title/tt0052520/", "https://www.imdb.com/title/tt1806234/"
-    ,"https://www.imdb.com/title/tt0296310/", "https://www.imdb.com/title/tt0303461/"]
+    ,"https://www.imdb.com/title/tt0296310/", "https://www.imdb.com/title/tt0303461/"],
+    pickRandomWord: function() {
+        randomIndex = Math.floor(Math.random() * topTVObject.name.length);
+        var randomTopTV = topTVObject.name[randomIndex];
+        pickedWord = randomTopTV.replace(/ /g, "+");
+        document.getElementById("gameWord").textContent = pickedWord.replace(/[^+ ]/g, "_");
+    }
 }    
 
 window.onload = function() {
-    pickRandomWord();
+    topTVObject.pickRandomWord();
 };
 
 document.onkeyup = function(e) {
@@ -57,8 +63,6 @@ document.onkeyup = function(e) {
         } else {
             document.getElementById("wrongSound").play();
         }
-
-        
     }
 
     if(document.getElementById("gameWord").textContent === pickedWord.replace(/ /g,"+")) 
@@ -81,13 +85,6 @@ document.onkeyup = function(e) {
     }
   }
 
-  function pickRandomWord(){
-    randomIndex = Math.floor(Math.random() * topTVObject.name.length);
-    var randomTopTV = topTVObject.name[randomIndex];
-    pickedWord = randomTopTV.replace(/ /g, "+");
-    document.getElementById("gameWord").textContent = pickedWord.replace(/[^+ ]/g, "_");
-  }
-
   function gameReset() {
     var pickedLetters = document.getElementsByClassName('letterPicked');    
        
@@ -95,6 +92,6 @@ document.onkeyup = function(e) {
         pickedLetters[0].classList.remove('letterPicked');
     }
 
-    guessesRemaining.textContent = "15";
-    pickRandomWord();
+    guessesRemaining.textContent = "13";
+    topTVObject.pickRandomWord();
   }
